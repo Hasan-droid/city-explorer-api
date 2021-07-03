@@ -59,7 +59,10 @@ class renderMovies{
 constructor(data){
     this.original_title=data.original_title;
     this.vote_count=data.vote_count;
-    this.poster_path='https://image.tmdb.org/t/p/original/'+data.poster_path;
+    if(data.poster_path){
+
+        this.poster_path='https://image.tmdb.org/t/p/original/'+data.poster_path;
+    }
 }
 }
 app.listen(PORT);
